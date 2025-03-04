@@ -24,9 +24,11 @@ jobs:
     - name: Configure Kaggle API Key
       run: |
         mkdir -p ~/.kaggle
-        echo "${{ secrets.KAGGLE_API_KEY }}" > ~/.kaggle/kaggle.json
+        echo '${{ secrets.KAGGLE_API_KEY }}' > ~/.kaggle/kaggle.json
         chmod 600 ~/.kaggle/kaggle.json
+        export KAGGLE_CONFIG_DIR=~/.kaggle
         cat ~/.kaggle/kaggle.json  # Debugging step (remove later)
+
 
     - name: Download Latest Dataset
       run: kaggle datasets download -d davidcariboo/player-scores -p data --unzip
