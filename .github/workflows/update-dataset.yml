@@ -26,17 +26,20 @@ jobs:
         mkdir -p ~/.kaggle
         echo '${{ secrets.KAGGLE_API_KEY }}' > ~/.kaggle/kaggle.json
         chmod 600 ~/.kaggle/kaggle.json
-        export KAGGLE_CONFIG_DIR=~/.kaggle
-        cat ~/.kaggle/kaggle.json  # Debugging step (remove later)
 
-
-    - name: Download Latest Dataset
-      run: kaggle datasets download -d davidcariboo/player-scores -p data --unzip
+    - name: Download All CSV Files
+      run: |
+        mkdir -p data  # Ensure data directory exists
+        kaggle datasets download -d davidcariboo/player-scores -p data --unzip
+        ls -l data  # Debugging step to verify files
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "actions@github.com"
-        git add data/players.csv
-        git commit -m "Updated dataset from Kaggle" || echo "No changes to commit"
-        git push
+        git checkout main  # Ensure we are on the main branch
+        git add -A
+        git commit -m "Updated all dataset files from Kaggle" || echo "No changes to commit"
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ElliottOctave/FootballDashboard.git main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
