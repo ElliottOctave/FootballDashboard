@@ -26,6 +26,7 @@ jobs:
         mkdir -p ~/.kaggle
         echo "${{ secrets.KAGGLE_API_KEY }}" > ~/.kaggle/kaggle.json
         chmod 600 ~/.kaggle/kaggle.json
+        cat ~/.kaggle/kaggle.json  # Debugging step (remove later)
 
     - name: Download Latest Dataset
       run: kaggle datasets download -d davidcariboo/player-scores -p data --unzip
