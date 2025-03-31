@@ -2,6 +2,9 @@
 
 This project is a Footbal Dashboard for a group assignment for the course information visualisation for our first Master year @VUB.
 
+# Datasets
+ - (1)[https://www.kaggle.com/datasets/davidcariboo/player-scores]
+
 ## Contributions
 Elliott Octave
 Marouane Benslimane
