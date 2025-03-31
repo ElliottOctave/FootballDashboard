@@ -6,10 +6,10 @@ This project is a Footbal Dashboard for a group assignment for the course inform
  - [Football Data from Transfermarkt](https://www.kaggle.com/datasets/davidcariboo/player-scores)
 
 ## Contributions
-Elliott Octave
-Marouane Benslimane
-Rayane Kouidane
-Zakaria Rabahi
+- Elliott Octave
+- Marouane Benslimane
+- Rayane Kouidane
+- Zakaria Rabahi
 
 # Prerequisites
 
