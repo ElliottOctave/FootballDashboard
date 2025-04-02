@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Football Dashboard</title>
+  <link rel="stylesheet" href="\Home\static\styles\home.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">Football Dashboard</h1>
+    <input type="text" id="search-bar" placeholder="Search players, teams..." />
+  </nav>
+
+  <!-- Main content -->
+  <main class="dashboard">
+    <div class="left-panel">
+      <h2>Compare</h2>
+      <form id="compare-form">
+        <input type="text" id="compare1" placeholder="Player or Team 1" required />
+        <input type="text" id="compare2" placeholder="Player or Team 2" required />
+        <button type="submit">Compare</button>
+      </form>
+    </div>
+
+    <div class="right-panel">
+      <h2>Top 15 Overview</h2>
+      <div id="top15-table">
+        <!-- JS will alternate the table here -->
+        <p>Loading Top 15...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Chart Section -->
+  <section class="chart-section">
+    <h2>Top 10 Players by Market Value</h2>
+    <div id="player-chart"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Football Dashboard | All rights reserved.</p>
+    <p>Built by your awesome group for the InfoVis course 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
