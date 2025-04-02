@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Football Dashboard</title>
-  <link rel="stylesheet" href="\Home\static\styles\home.css" />
+  <link rel="stylesheet" href="/Home/static/styles/home.css" />
+  <link rel="stylesheet" href="/Home/static/styles/chart.css" />
 </head>
 <body>
   <!-- Navbar -->
@@ -27,7 +28,6 @@
     <div class="right-panel">
       <h2>Top 15 Overview</h2>
       <div id="top15-table">
-        <!-- JS will alternate the table here -->
         <p>Loading Top 15...</p>
       </div>
     </div>
@@ -37,6 +37,7 @@
   <section class="chart-section">
     <h2>Top 10 Players by Market Value</h2>
     <div id="player-chart"></div>
+    <div id="tooltip"></div>
   </section>
 
   <!-- Footer -->
@@ -45,6 +46,9 @@
     <p>Built by your awesome group for the InfoVis course 🚀</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Load D3 from your node_modules -->
+  <script src="/node_modules/d3/dist/d3.min.js"></script>
+  <!-- Your visualization script -->
+  <script src="/Home/static/scripts/playerChart.js"></script>
 </body>
 </html>
