@@ -111,8 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr('y', 0 - (margin.top / 2))
         .attr('text-anchor', 'middle')
         .style('font-size', '16px')
-        .style('font-weight', 'bold')
-        .text('Top 10 Players by Current Market Value');
+        .style('font-weight', 'bold');
   
       // Add footnote
       svg.append('text')
