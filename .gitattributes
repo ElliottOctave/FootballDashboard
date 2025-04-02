@@ -1,3 +1,0 @@
-data/game_events.csv filter=lfs diff=lfs merge=lfs -text
-data/game_lineups.csv filter=lfs diff=lfs merge=lfs -text
-data/appearances.csv filter=lfs diff=lfs merge=lfs -text
