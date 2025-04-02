@@ -1,22 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Football Dashboard</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Top 10 Players by Market Value</h2>
-            <div id="player-chart"></div>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <html>
+    <head><title>Football Dashboard</title></head>
+    <body>
+        <h1>Top 5 Players</h1>
+        <div id="c742d7ce-63c0-41f3-b2ea-7762df7f69ff" data-root-id="p1105" style="display: contents;"></div>
+            <script type="text/javascript">
+        (function() {
+  const fn = function() {
+    Bokeh.safely(function() {
+      (function(root) {
+        function embed_document(root) {
+        const docs_json = '{"83021707-8efb-4812-8cad-268a0bb71d72":{"version":"3.7.2","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1105","attributes":{"x_range":{"type":"object","name":"DataRange1d","id":"p1106"},"y_range":{"type":"object","name":"DataRange1d","id":"p1107"},"x_scale":{"type":"object","name":"LinearScale","id":"p1115"},"y_scale":{"type":"object","name":"LinearScale","id":"p1116"},"title":{"type":"object","name":"Title","id":"p1108","attributes":{"text":"Example Player Stats"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1146","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1140","attributes":{"selected":{"type":"object","name":"Selection","id":"p1141","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1142"},"data":{"type":"map","entries":[["x",[1,2,3,4,5]],["top",[10,15,7,12,9]]]}}},"view":{"type":"object","name":"CDSView","id":"p1147","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1148"}}},"glyph":{"type":"object","name":"VBar","id":"p1143","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"fill_color":{"type":"value","value":"#1f77b4"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1144","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1145","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1114","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1127"},{"type":"object","name":"WheelZoomTool","id":"p1128","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1129","attributes":{"dimensions":"both","overlay":{"type":"object","name":"BoxAnnotation","id":"p1130","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p1136","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p1135","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p1137"},{"type":"object","name":"ResetTool","id":"p1138"},{"type":"object","name":"HelpTool","id":"p1139"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1122","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1123","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1124"},"axis_label":"Goals","major_label_policy":{"type":"object","name":"AllLabels","id":"p1125"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1117","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1118","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1119"},"axis_label":"Player Index","major_label_policy":{"type":"object","name":"AllLabels","id":"p1120"}}}],"center":[{"type":"object","name":"Grid","id":"p1121","attributes":{"axis":{"id":"p1117"}}},{"type":"object","name":"Grid","id":"p1126","attributes":{"dimension":1,"axis":{"id":"p1122"}}}]}}]}}';
+        const render_items = [{"docid":"83021707-8efb-4812-8cad-268a0bb71d72","roots":{"p1105":"c742d7ce-63c0-41f3-b2ea-7762df7f69ff"},"root_ids":["p1105"]}];
+        root.Bokeh.embed.embed_items(docs_json, render_items);
+        }
+        if (root.Bokeh !== undefined) {
+          embed_document(root);
+        } else {
+          let attempts = 0;
+          const timer = setInterval(function(root) {
+            if (root.Bokeh !== undefined) {
+              clearInterval(timer);
+              embed_document(root);
+            } else {
+              attempts++;
+              if (attempts > 100) {
+                clearInterval(timer);
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+              }
+            }
+          }, 10, root)
+        }
+      })(window);
+    });
+  };
+  if (document.readyState != "loading") fn();
+  else document.addEventListener("DOMContentLoaded", fn);
+})();
+    </script>
+
+    </body>
+    </html>
+    
