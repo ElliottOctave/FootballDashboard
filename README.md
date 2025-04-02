@@ -1,57 +1,27 @@
-# ⚽ Football Dashboard Web Page
+# Footbal Dashboard Web Page
 
-This project is a Football Dashboard created for the course **Information Visualisation** (Master 1) at **Vrije Universiteit Brussel (VUB)**.
+This project is a Footbal Dashboard for a group assignment for the course Information Visualisation for our first Master year @VUB.
 
-It combines modern web technologies (Vite + JS/CSS) with **Python's Bokeh library** to provide interactive, data-driven football statistics visualizations.
+# Datasets
+ - [Football Data from Transfermarkt](https://www.kaggle.com/datasets/davidcariboo/player-scores)
 
-## 📊 Dataset
-
-- [Football Player Scores (Kaggle)](https://www.kaggle.com/datasets/davidcariboo/player-scores)
-
-## 👥 Contributions
-
-- Elliott Octave  
-- Marouane Benslimane  
-- Rayane Kouidane  
+## Contributions
+- Elliott Octave
+- Marouane Benslimane
+- Rayane Kouidane
 - Zakaria Rabahi
 
-## 📦 Prerequisites
+# Prerequisites
 
-Make sure the following are installed on your machine:
+Make sure you have **Node.js** installed on your machine. You can download it from [https://nodejs.org]. npm (Node Package Manager) is included with Node.js.
 
-- Node.js (with npm): https://nodejs.org  
-- Python 3.8+  
-- pip (Python package installer)  
-- (Optional) A virtual environment tool like `venv` or `conda`
+#  Dependencies
 
-## 🖥️ Installation & Usage
+After cloning the project, run `npm install` in the repository. This will install all necessary packages listed in `package.json`:
 
-### 🔧 Frontend Setup (Vite)
+- **Vite**: Development server and build tool.
 
-1. Clone the repository:
+All dependencies are managed through npm and are installed automatically when you run `npm install`.
 
-   git clone https://github.com/your-repo/footballdashboard  
-   cd footballdashboard
-
-2. Install dependencies:
-
-   npm install
-
-3. Start the frontend dev server:
-
-   npm run dev
-
-### 🐍 Backend Setup (Bokeh - Python)
-
-1. Create and activate a virtual environment (recommended):
-
-   python -m venv venv  
-   .\venv\Scripts\Activate.ps1     (on PowerShell)  
-
-2. Install Python dependencies:
-
-   pip install -r requirements.txt
-
-3. Run the Bokeh server:
-
-   bokeh serve --show main.py
+#  Start the development server:
+Go to the right folder and run this command `npm run dev`.

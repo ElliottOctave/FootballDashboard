@@ -1,5 +1,0 @@
-bokeh==3.3.4
-pandas>=1.5.0
-numpy>=1.22
-openpyxl>=3.0.10
-requests>=2.28
