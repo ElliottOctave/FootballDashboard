@@ -1,6 +1,6 @@
 # Footbal Dashboard Web Page
 
-This project is a Footbal Dashboard for a group assignment for the course information visualisation for our first Master year @VUB.
+This project is a Footbal Dashboard for a group assignment for the course Information Visualisation for our first Master year @VUB.
 
 # Datasets
  - [Football Data from Transfermarkt](https://www.kaggle.com/datasets/davidcariboo/player-scores)
