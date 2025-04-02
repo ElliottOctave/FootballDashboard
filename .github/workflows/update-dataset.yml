@@ -2,26 +2,21 @@ name: Update Kaggle Dataset
 
 on:
   schedule:
-    - cron: "0 0 1 * 0"  # Runs every first of the month at midnight UTC
-  workflow_dispatch:  # Allows manual triggering
+    - cron: "0 0 1 * *"  # Runs monthly (first day at midnight UTC)
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   update-dataset:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository with LFS
+    - name: Checkout Repository
       uses: actions/checkout@v3
-      with:
-        lfs: true  # Enables Git Large File Storage
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: "3.9"
-
-    - name: Install Git LFS
-      run: git lfs install
 
     - name: Install Kaggle CLI
       run: pip install kaggle
@@ -34,23 +29,6 @@ jobs:
 
     - name: Download All CSV Files
       run: |
-        mkdir -p data  # Ensure data directory exists
+        mkdir -p data
         kaggle datasets download -d davidcariboo/player-scores -p data --unzip
-        ls -lh data  # Debugging step to verify file sizes
-
-    - name: Track Large CSV Files in LFS
-      run: |
-        git lfs track "data/game_events.csv"
-        git lfs track "data/game_lineups.csv"
-        git lfs track "data/appearances.csv"
-
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "actions@github.com"
-        git add .gitattributes
-        git add -A
-        git commit -m "Updated all dataset files from Kaggle using Git LFS" || echo "No changes to commit"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ElliottOctave/FootballDashboard.git main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ls -lh data
